@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="./img/logoWeb.svg"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles-index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./js/fontawesome.js"></script>
+    <title>FAKE Travel</title>
+</head>
+<body>
+    <!-- menu mobile -->
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa-solid fa-bars"></i></span>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a id="logoSubMenu" href="./index.html"><img src="./img/logo.png" width="150px"/></a>
+        <span href="#" id="btn-close-subMenu" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></span>
+        <ul>
+            <li><a href="./introduce.html">Giới Thiệu</a></li>
+            <li>
+                <a id="btn-mobile-TourNoiDia" href="./TourTrongNuoc.html">Tour Nội Địa <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i><sup><span class="ms-1 badge bg-danger">Hot</span></sup></a>
+                <ul id="mobile-TourNoiDia" class="hide">
+                    <li>
+                        <a id="btn-mobile-TourNoiDia-Bac" href="#">Du Lịch Miền Bắc <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i></a>
+                        <ul id="mobile-TourNoiDia-Bac" class="hide">
+                            <li><a href="#">Du Lịch Hà Nội</a></li>
+                            <li><a href="#">Du Lịch Sa Pa</a></li>
+                            <li><a href="#">Du Lịch Hạ Long</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="btn-mobile-TourNoiDia-Trung" href="#">Du Lịch Miền Trung <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i></a>
+                        <ul id="mobile-TourNoiDia-Trung" class="hide">
+                            <li><a href="#">Du Lịch Đà Nẵng</a></li>
+                            <li><a href="#">Du Lịch Phú Yên</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="btn-mobile-TourNoiDia-Nam"  href="#">Du Lịch Miền Nam <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i></a>
+                        <ul id="mobile-TourNoiDia-Nam" class="hide">
+                            <li><a href="#">Du Lịch Côn Đảo</a></li>
+                            <li><a href="#">Du Lịch Phú Quốc</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a id="btn-mobile-TourNuocNgoai" href="./TourNuocNgoai.html">Tour Nước Ngoài <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i></a>
+                <ul id="mobile-TourNuocNgoai" class="hide">
+                    <li>
+                        <a id="btn-mobile-TourNuocNgoai-A" href="#">Du Lịch Châu Á <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i></a>
+                        <ul id="mobile-TourNuocNgoai-A" class="hide">
+                            <li><a href="#">Du Lịch Hàn Quốc</a></li>
+                            <li><a href="#">Du Lịch Nhật Bản</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="btn-mobile-TourNuocNgoai-Au" href="#">Du Lịch Châu Âu <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i></a>
+                        <ul id="mobile-TourNuocNgoai-Au" class="hide">
+                            <li><a href="#">Du Lịch Anh</a></li>
+                            <li><a href="#">Du Lịch Nga</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="btn-mobile-TourNuocNgoai-My" href="#">Du Lịch Châu Mỹ <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i></a>
+                        <ul id="mobile-TourNuocNgoai-My" class="hide">
+                            <li><a href="#">Du Lịch Canada</a></li>
+                            <li><a href="#">Du Lịch Mỹ</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="btn-mobile-TourNuocNgoai-Uc" href="#">Du Lịch Châu Úc <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i></a>
+                        <ul id="mobile-TourNuocNgoai-Uc" class="hide">
+                            <li><a href="#">Du Lịch Sydney</a></li>
+                            <li><a href="#">Du Lịch Melbourne</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="./News.html">Tin Tức</a></li>
+            <li><a href="./contact.html">Liên Hệ</a></li>
+            <li>
+                <div id="mobile-box-search">
+                    <input type="text" style="width: 230px;" name="searchBar" placeholder="Tìm kiếm" class="rounded-0">
+                    <div class="btn btn-danger rounded-0" style="height: 36px;"><i class="fa-solid fa-magnifying-glass" style="text-shadow: none; font-size: 15px;"></i></div>
+                </div>
+            </li>
+            <li><a href="./Login.html">Đăng Nhập</a></li>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- menu desktop -->
+    <a name="home"></a>
+    <nav id="menu-select" class="navbar navbar-expand-md p-0">
+        <div class="container-fluid fixed-top p-0" id="box--header__menu">
+            <div class="container collapse navbar-collapse d-flex align-items-center" id="navbarNav">
+                <a class="nav-item" href="#">
+                    <img id="logoWeb" src="./img/logo.png" width="120px" class="ms-1 pb-2 mt-1"/>
+                </a>
+                <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#menu--main" aria-controls="menu--main" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="navbar-collapse collapse justify-content-end" id="menu--main" >
+                    <ul style="z-index: 999999;" class="navbar-nav text-red me-1 text-uppercase text-shadow">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./introduce.html">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item" id="TourNoiDia">
+                            <a class="nav-link text-white" href="./TourTrongNuoc.html">tour nội địa <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i><sup><span class="ms-1 badge bg-danger">Hot</span></sup></a>
+                            <table class="bg-light rounded hide" id="SubMenu_NoiDia" cellpadding="10px" >
+                                <thead>
+                                    <tr>
+                                        <th>Du Lịch Miền Bắc</th>
+                                        <th>Du Lịch Miền Trung</th>
+                                        <th>Du Lịch Miền Nam</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Du Lịch Hà Nội</td>
+                                        <td class="line-left">Du Lịch Đà Nẵng</td>
+                                        <td class="line-left">Du Lịch Côn Đảo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Du Lịch Sa Pa</td>
+                                        <td class="line-left hoverTour">Du Lịch Phú Yên</td>
+                                        <td class="line-left">Du Lịch Phú Quốc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Du Lịch Hạ Long</td>
+                                        <td class="line-left"></td>
+                                        <td class="line-left"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li class="nav-item" id="TourNuocNgoai">
+                            <a class="nav-link text-white" href="./TourNuocNgoai.html">tour nước ngoài <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i></a>
+                            <table class="bg-light rounded hide" id="SubMenu_NuocNgoai" cellpadding="10px" >
+                                <thead>
+                                    <tr>
+                                        <th>Du Lịch Châu Á</th>
+                                        <th>Du Lịch Châu Âu</th>
+                                        <th>Du Lịch Châu Mỹ</th>
+                                        <th>Du Lịch Châu Úc</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="line-left">Du Lịch Hàn Quốc</td>
+                                        <td class="line-left">Du Lịch Anh</td>
+                                        <td class="line-left">Du Lịch Canada</td>
+                                        <td class="line-left">Du Lịch Sydney</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="line-left">Du Lịch Nhật Bản</td>
+                                        <td class="line-left">Du Lịch Nga</td>
+                                        <td class="line-left">Du Lịch Mỹ</td>
+                                        <td class="line-left">Du Lịch Melbourne</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="line-left"></td>
+                                        <td class="line-left"></td>
+                                        <td class="line-left"></td>
+                                        <td class="line-left"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./News.html">tin tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./contact.html">liên hệ</a>
+                        </li>
+                        <li class="nav-item" id="item--search">
+                            <a class="nav-link text-white" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <div class="hide" id="box--search">
+                                <input type="text" style="height:35.5px;" name="searchBar" placeholder="Tìm kiếm" class="rounded-0">
+                                <div class="btn btn-danger rounded-0" style="height: 36px;"><i class="fa-solid fa-magnifying-glass" style="text-shadow: none; font-size: 15px;"></i></div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white pe-3" href="./Login.html">Đăng Nhập</a>
+                        </li>
+                        <li class="line-left ps-2"></li>
+                        <li class="nav-item text-white" id="item--shopCart">
+                            <a class="nav-link text-white" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <div id="box--shopCart" class="p-3 text-black text-capitalize hide" style="text-shadow: none; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+                                <p>Chưa có sản phẩm trong giỏ hàng.</p>
+                                <p></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- slide -->
+    <div id="carouselSlideImg" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <!-- button next -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselSlideImg" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselSlideImg" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselSlideImg" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <!-- slide img height: 50vw-->
+        <div class="carousel-inner" style="height: 100vh;">
+            <div class="carousel-item active h-100">
+                <img src="./img/lamvien.jpg" class="d-block w-100 h-100 zoom-img img-fit" alt="image">
+                <div class="carousel-caption d-none d-md-block text-shadow transText-ani" style="margin-bottom: 60px;">
+                    <h3>Đà Lạt City</h3>
+                    <p style="font-size: 17px;">Thành phố mộng mơ với bao kỉ niệm. Hòa mình hương gió núi rừng.</p>
+                </div>
+            </div>
+            <div class="carousel-item h-100">
+                <img src="./img/1_Top_5_Beaches_in_Nha_Trang_-_By_Simon_Dannhauer.jpg" class="d-block w-100 h-100 zoom-img img-fit" alt="image">
+                <div class="carousel-caption d-none d-md-block text-shadow transText-ani" style="margin-bottom: 60px;">
+                    <h3>Nha Trang Beach</h3>
+                    <p style="font-size: 17px;">Bãi cát vàng cùng hương biển từ xa vọng về cùng con sóng bạc</p>
+                </div>
+            </div>
+            <div class="carousel-item h-100">
+                <img src="./img/1600x1200-4.jpg" class="d-block w-100 h-100 zoom-img img-fit" alt="image">
+                <div class="carousel-caption d-none d-md-block text-shadow transText-ani" style="margin-bottom: 60px;">
+                    <h3>Paris - France</h3>
+                    <p style="font-size: 17px;">Nơi chốn thiên của tình yêu. Ngọn tháp Elffel tượng trưng cho tình yêu và sự lãng mạn của các cặp đôi</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselSlideImg" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselSlideImg" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- search bar -->
+    <div id="search-bar" class="reveal container mt-5 mb-5 pb-5 line-bottom rounded-0">
+        <h3 class="text-uppercase text-center mb-5 pt-5 fw-bold">Bộ Lọc Các Tour Du Lịch</h3>
+        <div class="row  row-cols-1 row-cols-lg-6  g-4">
+            <!-- danh muc -->
+            <div class="col dropdown d-flex justify-content-center">
+                <button class="btn btn-outline-dark dropdown-toggle h-100 rounded-0 w-100" type="button" data-bs-auto-close="outside" id="danhmuc-check" data-bs-toggle="dropdown" aria-expanded="false">
+                    Danh Mục
+                </button>
+                <div class="dropdown-menu" aria-labelledby="danhmuc-check" id="danhmuc" style="min-width: 350px;">
+                    <!-- cap 1 -->
+                    <ul>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="duLichNuocNgoai">
+                                <label class="form-check-label" for="duLichNuocNgoai">
+                                    Du lịch nước ngoài
+                                </label>
+                            </div>
+                            <!-- cap 2 -->
+                            <ul class="line-left">
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="dlCA">
+                                        <label class="form-check-label" for="dlCA">
+                                            Du lịch châu Á
+                                        </label>
+                                    </div>
+                                    <ul class="line-left">
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="dlHQ">
+                                                <label class="form-check-label" for="dlHQ">
+                                                    Du lịch Hàn Quốc
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="dlNB">
+                                                <label class="form-check-label" for="dlNB">
+                                                    Du lịch Nhật Bản
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="dlCAu">
+                                        <label class="form-check-label" for="dlCAu">
+                                            Du lịch châu Âu
+                                        </label>
+                                    </div>
+                                    <ul class="line-left">
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="dlAnh">
+                                                <label class="form-check-label" for="dlAnh">
+                                                    Du lịch Anh
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="dlNga">
+                                                <label class="form-check-label" for="dlNga">
+                                                    Du lịch Nga
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="dlCMy">
+                                        <label class="form-check-label" for="dlCMy">
+                                            Du lịch châu Mỹ
+                                        </label>
+                                    </div>
+                                    <ul class="line-left">
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="dlCana">
+                                                <label class="form-check-label" for="dlCana">
+                                                    Du lịch Canada
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="dlMy">
+                                                <label class="form-check-label" for="dlMy">
+                                                    Du lịch Mỹ
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="duLichTrongNuoc">
+                                <label class="form-check-label" for="duLichTrongNuoc">
+                                    Du lịch trong nước
+                                </label>
+                            </div>
+                            <!-- cap 2 -->
+                            <ul class="line-left">
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="dlmBac">
+                                        <label class="form-check-label" for="dlmBac">
+                                            Du lịch miền Bắc
+                                        </label>
+                                    </div>
+                                    <ul class="line-left">
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="dlHaLong">
+                                                <label class="form-check-label" for="dlHaLong">
+                                                    Du lịch Hạ Long
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="dlHaNoi">
+                                                <label class="form-check-label" for="dlHaNoi">
+                                                    Du lịch Hà Nội
+                                                </label>
+                                            </div> 
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="dlSapa">
+                                                <label class="form-check-label" for="dlSapa">
+                                                    Du lịch Sapa
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="dlmTrung">
+                                        <label class="form-check-label" for="dlmTrung">
+                                            Du lịch miền Trung
+                                        </label>
+                                    </div>
+                                    <ul class="line-left">
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="dlDaNang">
+                                                <label class="form-check-label" for="dlDaNang">
+                                                    Du lịch Đà Nẵng
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="dlDakLak">
+                                                <label class="form-check-label" for="dlDakLak">
+                                                    Du lịch Đăk Lăk
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="dlPhuYen">
+                                                <label class="form-check-label" for="dlPhuYen">
+                                                    Du lịch Phú Yên
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="dlmNam">
+                                        <label class="form-check-label" for="dlmNam">
+                                            Du lịch Miền Nam
+                                        </label>
+                                    </div>
+                                    <ul class="line-left">
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="dlConDao">
+                                                <label class="form-check-label" for="dlConDao">
+                                                    Du lịch Côn Đảo
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="dlPhuQuoc">
+                                                <label class="form-check-label" for="dlPhuQuoc">
+                                                    Du lịch Phú Quốc
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="dlVungTau">
+                                                <label class="form-check-label" for="dlVungTau">
+                                                    Du lịch Vũng Tàu
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Gia -->
+            <div class="col dropdown d-flex justify-content-center">
+                <button class="btn btn-outline-dark dropdown-toggle w-100 h-100 rounded-0" type="button" id="gia-rad" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">
+                    Giá Thành
+                </button>
+                <ul id="gia" class="dropdown-menu" aria-labelledby="gia-rad" style="width: 300px;">
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gia" value="" id="AllGia">
+                            <label class="form-check-label" for="AllGia">
+                                All
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gia" value="" id="2tr">
+                            <label class="form-check-label" for="2tr">
+                                2,000,000 &#8363; - 5,000,000 &#8363;
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gia" value="" id="5tr">
+                            <label class="form-check-label" for="5tr">
+                                5,000,000 &#8363; - 10,000,000 &#8363;
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gia" value="" id="10tr">
+                            <label class="form-check-label" for="10tr">
+                                10,000,000 &#8363; - 15,000,000 &#8363;
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gia" value="" id="15tr">
+                            <label class="form-check-label" for="15tr">
+                                15,000,000 &#8363;  - 20,000,000 &#8363;
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- So Ngay -->
+            <div class="col dropdown d-flex justify-content-center">
+                <button class="btn btn-outline-dark dropdown-toggle w-100 h-100 rounded-0" type="button" data-bs-auto-close="outside" id="soNgay-checkbox" data-bs-toggle="dropdown" aria-expanded="false">
+                    Số Ngày
+                </button>
+                <ul class="dropdown-menu ps-4" aria-labelledby="soNgay-checkbox">
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="15ngay">
+                            <label class="form-check-label" for="15ngay">
+                                15 ngày
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="10ngay">
+                            <label class="form-check-label" for="10ngay">
+                                10 ngày
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="20ngay">
+                            <label class="form-check-label" for="20ngay">
+                                20 ngày
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="5ngay">
+                            <label class="form-check-label" for="5ngay">
+                                05 ngày
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="12ngay">
+                            <label class="form-check-label" for="12ngay">
+                                12 ngày
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- noi khoi hanh -->
+            <div class="col dropdown d-flex justify-content-center">
+                <button class="btn btn-outline-dark dropdown-toggle rounded-0 w-100 h-100" type="button" id="khoiHanh-Checkbox" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">
+                    Nơi Khởi Hành
+                </button>
+                <ul class="dropdown-menu ps-4" aria-labelledby="khoiHanh-Checkbox" style="width:200px;">
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="fromHaNoi">
+                            <label class="form-check-label" for="fromHaNoi">
+                                Hà Nội
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="fromTp-HCM">
+                            <label class="form-check-label" for="fromTp-HCM">
+                                Tp. Hồ Chí Minh
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Giam gia -->
+            <div class="col d-flex justify-content-center">
+                <button class="btn btn-warning form-check rounded-0 p-0 w-100 h-100 justify-content-center">
+                    <input class="form-check-input ms-4 me-3" type="checkbox" value="" id="giamGia">
+                    <label class="form-check-label pb-2 pt-2 pe-5" for="giamGia">
+                        Giảm Giá
+                    </label>
+                </button>
+            </div>
+            <!-- button tim -->
+            <div class="col d-flex justify-content-center">
+                <button class="btn btn-info d-flex pt-3 pb-3 rounded-0 h-100 w-100 justify-content-center" type="button">
+                    <i class="fa-solid fa-magnifying-glass mt-1 me-2"></i>Tìm kiếm
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- list tour hot -->
+    <div class="reveal container-fluid text-center p-5 pb-5">
+        <h1 class="text-uppercase fs-2">Tour Mua Nhiều</h1>
+        <p class="mb-5 fst-italic text-danger text-uppercase">kiểm tra tour phù hợp và mua ngay</p>
+        <div class="row row-cols-1 row-cols-md-3 g-6">
+            <div class="col mb-4">
+                <div id="card-1" class="card h-100 hover-zoom">
+                    <img src="./img/l1.png" class="card-img-top" alt="...">
+                    <div class="card-body bg-opacity-100">
+                        <h5 class="card-title">Paris - Pháp</h5>
+                        <p class="card-text pt-2">Du lịch Pháp 7 ngày ở Paris Giá tốt nhất 2022.</p>
+                        <p><strike style="font-size: 13px;">35,000,000<sup>&#8363;</sup></strike> <b style="color:red;">30,000,000<sup>&#8363;</sup></b></p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="text-muted">Date: 22/10/2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 hover-zoom">
+                    <img src="./img/l2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vịnh Hạ Long - Việt Nam</h5>
+                        <p class="card-text pt-2">Du lịch Vịnh Hạ Long 3 ngày ở Việt Nam Giá tốt nhất 2022.</p>
+                        <p><strike style="font-size: 13px;">15,000,000<sup>&#8363;</sup></strike> <b style="color:red;">8,000,000<sup>&#8363;</sup></b></p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="text-muted">Date: 23/10/2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 hover-zoom">
+                    <img src="./img/l3.jpg" class="card-img-top" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title">BangKok - Thái Lan</h5>
+                        <p class="card-text pt-2">Du lịch BangKok 14 ngày tại Thái Lan Giá tốt nhất cùng các dịch vụ ưu đãi đặc biệt 2022.</p>
+                        <p><strike style="font-size: 13px;">25,000,000<sup>&#8363;</sup></strike> <b style="color:red;">20,000,000<sup>&#8363;</sup></b></p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="text-muted">Date: 21/10/2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 hover-zoom">
+                    <img src="./img/l4.jpg" class="card-img-top" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title">Tokyo - Nhật Bản</h5>
+                        <p class="card-text pt-2">Du lịch Nhật Bản 30 ngày tại Tokyo Giá tốt nhất 2022.</p>
+                        <p><strike style="font-size: 13px;">35,000,000<sup>&#8363;</sup></strike> <b style="color:red;">30,000,000<sup>&#8363;</sup></b></p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="text-muted">Date: 22/12/2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 hover-zoom">
+                    <img src="./img/l5.png" class="card-img-top" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title">USA - Mỹ</h5>
+                        <p class="card-text">Du Lịch Mỹ 21 ngày tại Atlanta giá tốt nhất 2022 cùng các dịch vụ ưu đãi bậc nhất.</p>
+                        <p><strike style="font-size: 13px;">45,000,000<sup>&#8363;</sup></strike> <b style="color:red;">42,000,000<sup>&#8363;</sup></b></p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="text-muted">Date: 22/08/2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 hover-zoom">
+                    <img src="./img/l6.png" class="card-img-top" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title">Rusia - Nga</h5>
+                        <p class="card-text">Du Lịch Nga 7 ngày tại Moscow giá tốt nhất 2022 cùng các quà tặng hấp dẫn.</p>
+                        <p><strike style="font-size: 13px;">45,000,000<sup>&#8363;</sup></strike> <b style="color:red;">32,000,000<sup>&#8363;</sup></b></p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="text-muted">Date: 22/12/2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- nhan xet cua khach hang -->
+    <div id="comment-customer" class="container mb-5 reveal">
+        <h2 class="text-center text-uppercase pt-5 mt-5 mb-4">Khách hàng thân thiết</h2>
+        <div id="carouselNhanXetKhachHang" class="carousel slide pb-5" data-bs-ride="carousel">
+            <div class="carousel-inner w-50" style="margin: 0 auto;">
+                <div class="carousel-item text-justify active">
+                    <p>Tôi vừa đi tour du lịch Nhật Bản ngày 12.09.2022 vừa qua. Cảm nhận ăn ngon chất lượng. Hướng dẫn quá tốt quá nhiệt tình thân thiện chăm sóc chu đáo tận tình. Thay mặt cho gia đình 1 lần nữa cảm ơn FAKE Travel.</p>
+                    <p class="text-center"><b>Chị: Nguyễn Thị Thanh Vỹ</b> / Giáo viên</p>
+                </div>
+                <div class="carousel-item text-justify">
+                    <p>Tôi vừa đi tour du lịch ở Nga ngày 15.02.2021 vừa qua. Cảm nhận chuyến đi rất tốt. Hướng dẫn quá tốt quá nhiệt tình thân thiện chăm sóc chu đáo tận tình. Cảm ơn FAKE Travel.</p>
+                    <p class="text-center"><b>Anh: Nguyễn Hùng Long</b> / CEO MSI</p>
+                </div>
+                <div class="carousel-item text-justify">
+                    <p>Tôi vừa đi tour du lịch Phú Quốc ngày 14.11.2021 vừa qua. Cảm nhận ăn ngon chất lượng. Hướng dẫn quá tốt quá nhiệt tình thân thiện chăm sóc chu đáo tận tình. Thay mặt cho gia đình 1 lần nữa cảm ơn FAKE Travel.</p>
+                    <p class="text-center"><b>Chị: Nguyễn Thị Hoa</b> / Nhân Viên Văn Phòng</p>
+                </div>
+                <div class="carousel-item text-justify">
+                    <p>Tôi vừa đi tour du lịch Hàn Quốc ngày 24.03.2021 vừa qua. Cảm nhận ăn ngon chất lượng. Hướng dẫn quá tốt quá nhiệt tình thân thiện chăm sóc chu đáo tận tình. Thay mặt cho gia đình 1 lần nữa cảm ơn FAKE Travel.</p>
+                    <p class="text-center"><b>Chị: Nguyễn Văn Trí</b> / Nhân Viên Marketing</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- slide img -->
+    <div class="container-fluid p-0 position-relative mb-5" style="height: 800px;">
+        <div class="img-slide-DaNang h-100">
+        </div>
+    </div>
+
+    <!-- content slide img -->
+    <div class="reveal container mt-5 mb-5">
+        <table align="center" class="text-center">
+            <th style="padding: 10px;" colspan="2">
+                <h2 class="mb-5">Đà Nẵng - Thành Phố Đáng Sống</h2>
+            </th>
+            <tr class="text-justify m-5" valign="top">
+                <td style="width: 70vh; padding:0 20px;">Đà Nẵng là một thành phố biển với bãi biển dài hơn 60 km. Với bãi biển đẹp, trải dài thoai thoải và cát trắng miên man, biển Mỹ Khê Đà Nẵng được tạp chí Forbes của Mỹ bình chọn là 1 trong 6 bãi biển quyến rũ nhất hành tinh. Ngụp lặn trong nước biếc, nô giỡn với những con sóng và tắm nắng trên bãi cát trắng mịn đủ để mang lại cho bất kỳ ai cảm giác thư giãn sau những giờ làm việc. Không những vậy, có rất nhiều dịch vụ biển cho bạn trải nghiệm như canoing, dù kéo, lướt ván, chèo thuyền chuối, motor nước, lặn biển ngắm san hô.</td>
+                <td style="width: 45vh; padding:0 20px; border-left: 1.8px solid #fb3749">Với vị trí là một trong ba trung tâm du lịch lớn trên bản đồ du lịch Việt Nam, Đà Nẵng thành phố biển xinh đẹp hiền hòa và mến khách, nơi mà bạn có thể dễ dàng đến được bằng cả đường bộ, đường hàng không và đường thủy. Một dấu ấn địa lý và lịch sử, điểm trung chuyển tiện lợi đến các di sản văn hóa thế giới như Huế, Mỹ Sơn, Hội An và khu dự trữ sinh quyển thế giới Cù Lao Chàm.</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Why choose FAKE -->
+    <div class="reveal container-fluid p-0 reveal">
+        <div class="img-fluid img-choose-me bg-black text-center text-white fs-5">
+            <h1 class="pt-5 pb-5 text-uppercase">Lý do chọn FAKE ?</h1>
+            <div id="whychoose" class="container row row-cols-1 row-cols-lg-3 g-lg-5 mt-lg-3 box-center" style="padding-bottom: 100px;">
+                <div class="col load">
+                    <i style="font-size: 60px;" class="fa-solid fa-handshake pt-5 mb-5"></i>
+                    <h4 class="text-uppercase mb-4">dịch vụ</h4>
+                    <p>Một trong những đơn vị đi đầu trong việc đặt tour online tốt nhất Việt Nam. Áp dụng những công nghệ hiện đại nhất.</p>
+                </div>
+                <div class="col load">
+                    <i style="font-size: 60px;" class="fa-solid fa-headset mb-5 pt-5"></i>
+                    <h4 class="text-uppercase mb-4">hỗ trợ 24/7</h4>
+                    <p>Luôn giải đáp mọi thắc mắc của khách hàng dù bất kì thời gian nào trong ngày. Liên hệ ngay để trải nghiệm</p>
+                </div>
+                <div class="col load">
+                    <i style="font-size: 60px;" class="fa-solid fa-tags mb-5 pt-5"></i>
+                    <h4 class="text-uppercase mb-4">ưu đãi</h4>
+                    <p>Phương châm của công ty là để mọi người mọi nhà đều có thể đi du lịch với giá cả hợp lý,</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- info tour, activites -->
+    <div class="container mt-5 pb-5 reveal">
+        <div class="row row-cols-sm-1 row-cols-md-4 g-3 text-center" style="font-size: 20px;">
+            <div class="col">
+                <i style="font-size: 50px; color: rgb(87, 87, 87);" class="fa-solid fa-person-circle-check"></i>
+                <h3 id="countHaiLong" class="mt-4 mb-2"><span></span>+</h3>
+                <p class="text-danger">Khách hàng hài lòng</p>
+            </div>
+            <div class="col">
+                <i style="font-size: 50px; color: rgb(87, 87, 87);" class="fa-solid fa-map-location-dot"></i>
+                <h3  id="countTour" class="mt-4 mb-2"><span></span>+</h3>
+                <p class="text-danger">Tour hoàn thành</p>
+            </div>
+            <div class="col">
+                <i style="font-size: 50px; color: rgb(87, 87, 87);" class="fa-solid fa-briefcase"></i>
+                <h3  id="countBusiness" class="mt-4 mb-2"><span></span>+</h3>
+                <p class="text-danger">Doanh nghiệp</p>
+            </div>
+            <div class="col">
+                <i style="font-size: 50px; color: rgb(87, 87, 87);" class="fa-solid fa-clipboard-user"></i>
+                <h3 id="countStaff" class="mt-4 mb-2"><span></span>+</h3>
+                <p class="text-danger">Tư vấn viên</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- News & voucher -->
+    <div id="news-vouchers" class="reveal container-fluid bg-black text-white text-center pb-5">
+        <div id="title-news-vouver" class="text-uppercase pt-5">
+            <h2>tin tức và ưu đãi</h2>
+            <p class="text-warning">Tin mới nhất và các ưu đãi nổi bật</p>
+        </div>
+        <div id="list-img-news" class="">
+            <div class="imgV bg-info" style="width: 100%; height: 400px;">
+                <img src="./img/l1.png" class="w-100 h-100 img-fit blur-img"/>
+                <div class="text-img-voucher text-black bg--gra pt-3 pb-3" style="display: none;">
+                    <h3>France - Paris</h3>
+                    <p><strike style="font-size: 13px;">40,000,000<sup>&#8363;</sup></strike> <b style="color:red;">30,000,000<sup>&#8363;</sup></b></p>
+                </div>
+            </div>
+            <div class="imgV bg-info" style="width: 100%; height: 400px;">
+                <img src="./img/l2.png" class="w-100 h-100 img-fit blur-img"/>
+                <div class="text-img-voucher text-black bg--gra pt-3 pb-3" style="display: none;">
+                    <h3>Vịnh Hạ Long</h3>
+                    <p><strike style="font-size: 13px;">25,000,000<sup>&#8363;</sup></strike> <b style="color:red;">15,000,000<sup>&#8363;</sup></b></p>
+                </div>
+            </div>
+            <div class="imgV bg-info" style="width: 100%; height: 400px;">
+                <img src="./img/l3.jpg" class="w-100 h-100 img-fit blur-img"/>
+                <div class="text-img-voucher text-black bg--gra pt-3 pb-3" style="display: none;">
+                    <h3>ThaiLand</h3>
+                    <p><strike style="font-size: 13px;">35,000,000<sup>&#8363;</sup></strike> <b style="color:red;">32,000,000<sup>&#8363;</sup></b></p>
+                </div>
+            </div>
+            <div class="imgV bg-info" style="width: 100%; height: 400px;">
+                <img src="./img/l4.jpg" class="w-100 h-100 img-fit blur-img"/>
+                <div class="text-img-voucher text-black bg--gra pt-3 pb-3" style="display: none;">
+                    <h3>Japan - Tokyo</h3>
+                    <p><strike style="font-size: 13px;">35,000,000<sup>&#8363;</sup></strike> <b style="color:red;">30,000,000<sup>&#8363;</sup></b></p>
+                </div>
+            </div>
+            <div class="imgV bg-info" style="width: 100%; height: 400px;">
+                <img src="./img/l5.png" class="w-100 h-100 img-fit blur-img"/>
+                <div class="text-img-voucher text-black bg--gra pt-3 pb-3" style="display: none;">
+                    <h3>USA - Atlanta</h3>
+                    <p><strike style="font-size: 13px;">45,000,000<sup>&#8363;</sup></strike> <b style="color:red;">20,000,000<sup>&#8363;</sup></b></p>
+                </div>
+            </div>
+            <div class="imgV bg-info" style="width: 100%; height: 400px;">
+                <img src="./img/l6.png" class="w-100 h-100 img-fit blur-img"/>
+                <div class="text-img-voucher text-black bg--gra pt-3 pb-3" style="display: none;">
+                    <h3>Rusia - Coscow</h3>
+                    <p><strike style="font-size: 13px;">35,000,000<sup>&#8363;</sup></strike> <b style="color:red;">30,000,000<sup>&#8363;</sup></b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer" class="container-fluid img-footer bg-black text-white p-0">
+        <div class="container-fluid row row-cols-sm-1 row-cols-md-4 p-5">
+            <div class="col list-style-none" id="LienHe">
+                <h6>Liên Hệ</h6>
+                <ul id="footer--lienhe">
+                    <li class="text-white">
+                        <i class="fa-solid fa-location-dot pe-3" style="color: yellow;"></i>  140 Lê Trọng Tấn, Q. Tân Phú, TP. HCM
+                    </li>
+                    <li>
+                        <a href="tel:1900 100 100"><i class="fa-solid fa-phone pe-3" style="color: yellow;"></i> 1900 100 100</a></li>
+                    <li>
+                        <a href="sendto:FakeTravel@gmail.com">
+                            <i class="fa-solid fa-envelope pe-3" style="color: yellow;"></i> FakeTravel@gmail.com
+                        </a>
+                    </li>
+                    <li class="text-white">
+                        Đăng ký để được nhận thông tin khuyến mãi một cách nhanh chóng.
+                    </li>
+                    <li class="opacity-100">
+                        <input id="text-sendMail" style="width:180px;" type="text" placeholder="Email của bạn"/>
+                        <input id="btn-sendMail" type="submit" value="Gửi"/>
+                    </li>
+                </ul>
+            </div>
+            <div class="col" id="TinTuc">
+                <h6>Tin Tức</h6>
+                <ul>
+                    <li><a href="#">Bản tin Du Lịch Việt</a></li>
+                    <li><a href="#">Góc báo chí Du Lịch Việt</a></li>
+                    <li><a href="#">Cẩm nang du lịch</a></li>
+                    <li><a href="#">Khám phá du lịch</a></li>
+                    <li><a href="#">Kinh nghiệm du lịch</a></li>
+                    <li><a href="#">Sự kiện du lịch</a></li>
+                    <li><a href="#">Tư vấn du lịch</a></li>
+                    <li><a href="#">Tuyển dụng Du Lịch</a></li>
+                </ul>
+            </div>
+            <div class="col" id="GocKhachHang">
+                <h6>Góc Khách Hàng</h6>
+                <ul>
+                    <li><a href="#">Quy tắc bảo hiểm</a></li>
+                    <li><a href="#">Điều kiện và điều khoản</a></li>
+                    <li><a href="#">Quyền riêng tư</a></li>
+                    <li><a href="#">Chính sách bảo mật và thông tin</a></li>
+                    <li><a href="#">Ý kiến khách hàng</a></li>
+                    <li><a href="#">Khách hàng thân thiết</a></li>
+                    <li><a href="#">Phương thức thanh toán</a></li>
+                </ul>
+            </div>
+            <div class="col" id="TourPhoBien">
+                <h6>Tour Phổ Biến</h6>
+                <div class="row row-cols-2 row-cols-md-3 g-3 mt-3">
+                    <div class="col">
+                        <img class="img-fit rectangle-100-60 img-tour-fv" src="./img/l1.png" alt="img-1">
+                    </div>
+                    <div class="col">
+                        <img class="img-fit rectangle-100-60 img-tour-fv" src="./img/l2.png" alt="img-1">
+                    </div>
+                    <div class="col">
+                        <img class="img-fit rectangle-100-60 img-tour-fv" src="./img/l3.jpg" alt="img-1">
+                    </div>
+                    <div class="col">
+                        <img class="img-fit rectangle-100-60 img-tour-fv" src="./img/l4.jpg" alt="img-1">
+                    </div>
+                    <div class="col">
+                        <img class="img-fit rectangle-100-60 img-tour-fv" src="./img/l5.png" alt="img-1">
+                    </div>
+                    <div class="col">
+                        <img class="img-fit rectangle-100-60 img-tour-fv" src="./img/l6.png" alt="img-1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center" id="social-network">
+            <h6>Social Network</h6>
+            <ul class="p-0">
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+        <div class="text-center mt-5 pb-3">
+            &#169; 2022 Official Website FAKE Tourism
+        </div>
+    </div>
+
+    <!-- back home -->
+    <a href="#home" class="remove-decoration d-flex">
+        <div id="btn-backhome" class="hide">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+    </a>
+
+</body>
+    <script src="./js/js-index.js"></script>
+</html>

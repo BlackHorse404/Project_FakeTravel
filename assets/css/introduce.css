@@ -1,0 +1,173 @@
+
+
+/* common */
+h4{
+    font-size: 17px;
+    padding-bottom: 30px;
+}
+
+/* end common */
+/* body */
+
+body{
+    background: #353535;
+    font-family: "Arima Madurai", sans-serif;
+    color: #fff;
+}
+/* end body */
+
+/* header */
+#header
+{
+    width: 100%;
+
+}
+#heading
+{
+    height:100px;
+    max-width: 960px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.container-fluid
+{
+    width: 100%;
+    padding: 0;
+}
+/* logo */
+#logo
+{
+    display: flex;
+    justify-items: start;
+    float: left;
+}
+
+/* menu*/
+
+#menu
+{
+    display: flex;
+    justify-items: end;
+    width: 770px;
+    margin-left: auto;;
+}
+.nav-item
+{
+    height: 100%;
+}
+.nav-link
+{
+
+}
+.nav-item:hover > .dropdown-menu
+{
+	display: block;
+}
+.dropdown-item:hover > .dropdown-menu
+{
+	display: block;
+}
+.dropdown-menu
+{
+	top: 30px !important;
+    font-weight: 700;
+    font-size: 12px;
+
+}
+.dropend > .dropdown-menu
+{
+	left: 155px !important;
+    
+
+}
+
+/* text */
+.navbar-nav .nav-item > a{
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+}
+/* search */
+.nav-item >#tour-out::after
+{
+	content: 'hot';
+    display: inline-block;
+    font-size: 9px;
+    line-height: 9px;
+    text-transform: uppercase;
+    margin-left: 4px;
+    background-color: red;
+    font-weight: bolder;
+    border-radius: 2px;
+    color: #fff;
+    padding: 2px 3px 3px;
+    position: relative;
+    top: 0;
+	border: none;
+}
+/* end menu */
+
+/* dang nhap */
+
+
+/* end dang nhap */
+
+/* end header */
+
+/* begin main */
+#main-content
+{
+    display:flex;
+    color: #353535;
+}
+.content-text h3
+{
+    text-transform: uppercase;
+    font-weight: 550;
+}
+/* end begin */
+
+/* footer */
+
+#footer
+{
+
+    background: #000;
+}
+.row-lg
+{
+    max-width: 960px !important ;
+    margin: auto;
+}
+#ft-row1
+{
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% 50%;
+}
+
+.row
+{
+    padding-bottom: 10px;
+}
+/* tour pho bien */
+.ft-box-img > .col-4
+{
+    width: 90px;
+    height: 90px;
+    padding: 0 10px 10px 0;
+}
+
+.ft-box-img img{
+    width: 100%;
+    height: 100%;
+}
+/* icon */
+.bi
+{
+    color: #353535;
+    background: none;
+}
+
+/* end footer */

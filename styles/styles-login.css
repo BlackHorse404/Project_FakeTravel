@@ -1,0 +1,252 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+.text-shadow-light{
+    text-shadow: 1px 1px 4px white;
+}
+.activeStateUser{
+    border-bottom: 2px solid rgb(7, 7, 7);
+}
+
+body{
+    background-image: url("../img/background-login2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    background-position: center;
+    min-height: 100vh;
+    background-position: 0px 0px;
+    font-family: 'Roboto', sans-serif;
+    animation: animatedBackground 20s linear infinite alternate;
+}
+
+#errEmail,#errPass,#errEmail2, #errPass2, #errRePass2{
+    display: none;
+}
+
+#form-login{
+    margin: auto;
+    /* background-image: linear-gradient(to right,rgba(237, 224, 194,0.3), rgba(90, 141, 143,0.3)); */
+    background-color: rgba(231, 255, 255, 0.750);
+    box-shadow: 1px 1px 12px 4px rgba(40, 40, 40, 0.615);
+    max-width: 380px;
+    padding-top: 0;
+    border-radius: 10px;
+    animation: showForm 0.6s linear forwards;
+}   
+
+#form-login .header #back-home{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    
+}
+#form-login .body{
+    padding: 20px 15px;
+}
+
+#back-home{
+    height: 20%;
+    font-size: 1.6em;
+    color: white;
+    margin: auto;
+    background-color: rgb(0, 0, 0);
+}
+#back-home a, #back-home a i{
+    color: white;
+    padding: 10px 6px;
+    text-decoration: none;
+}
+#back-home a{
+    padding: 0;
+}
+#back-home a i{
+    background-color: red;
+    padding: 12px 20px;
+    border-top-left-radius: 10px;
+    opacity: 0.9;
+}
+#back-home a i:hover{
+    opacity: 1;
+    text-shadow: 1px 1px 10px rgb(255, 255, 255);
+    cursor: pointer;
+}
+#back-home img{
+    margin-left: 78px;
+}
+
+#state-user ul, li{
+    padding-left: 0;
+    width: 100%;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+}
+#state-user li:first-child{
+    margin-right: 5px;
+}
+#state-user li:hover{
+    border-bottom: 2px solid aqua;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+#forget-password{
+    color: rgba(0, 0, 255, 0.6);
+    text-align: right;
+}
+#forget-password:hover{
+    color:blue;
+}
+
+#box-register input,#box-login input{
+    display: block;
+}
+
+#open-terms{
+    /* color: rgb(221, 221, 221); */
+    color: rgba(0, 0, 255, 0.641);
+}
+#open-terms:hover{
+    color: blue;
+}
+
+input[name="Email"],input[name="password"],input[name="re-password"]{
+    width: 100%;
+    height: 40px;
+    border-radius: 1px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+}
+
+input[name="Email"]:focus-visible,input[name="re-password"]:focus-visible, input[name="password"]:focus-visible
+{
+    outline-style: unset;
+    box-shadow: 0px 0px 18px 5px rgba(255, 255, 255, 0.8);
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px rgb(180, 254, 254) inset !important;
+}
+input[name="terms"]{
+    height: 18px;
+    width: 18px;
+    position: relative;
+    top: -1px;
+}
+input[name="login"]{
+    width: 60%;
+    margin: auto;
+    padding: 8px 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: aqua;
+    border: none;
+    border-radius: 5px;
+    opacity: 0.8;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+input[name="login"]:hover{
+    box-shadow: 1px 1px 8px aqua;
+    background-color: aqua;
+    opacity: 1;
+}
+
+input[name="register"]{
+    width: 60%;
+    margin: 0 auto;
+    padding: 8px 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #ffff00;
+    border: none;
+    border-radius: 5px;
+    opacity: 0.8;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+input[name="register"]:hover{
+    box-shadow: 1px 1px 8px #ffff00;
+    background-color: #ffff00;
+    opacity: 1;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+@keyframes showForm {
+    0%{
+        transform: translateY(60px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes showFormSuccess {
+    0%{
+        transform: translateY(-60px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes animatedBackground {
+    from {
+        background-position: bottom;
+    }
+    to {
+        background-position:top;
+    }
+}
+
+/* form success */
+#form-success{
+    padding-top: 5px;
+    position: absolute;
+    top: 25px;
+    width: 180px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid rgb(159, 159, 159);
+    border-left: 8px solid #2fff00;
+    box-shadow: 1px 1px 8px 1px #2fff00;
+    animation: showFormSuccess 0.5s forwards ease;
+}
+#form-success>i{
+    padding: 6px;
+    margin-right: 10px;
+    background-color: #2fff00;
+    border-radius: 100%;
+}

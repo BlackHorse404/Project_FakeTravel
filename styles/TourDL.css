@@ -1,0 +1,63 @@
+.head{
+    font-size: 35px;
+    text-align: center;
+    margin: auto;
+    padding-top:7px;
+    color: white;
+}
+.col-sm-3{
+    margin-left: 7%;
+    margin-right: -10%;
+    padding-bottom: 8%;
+    margin-top: 5%;
+    margin-bottom: -10%;
+}
+
+.card{
+    width:85%;
+    height: 100%;
+}
+.card-deck{
+    margin-top: -7%;
+}
+.card-img-top{
+    width: 100%;
+    height: 200px;
+}
+.card-title{
+    font-size: 20px;
+}
+.row{
+    padding: 0px;
+}
+
+.chitiet{
+    height: 25px;
+}
+
+.ttchitiet li{
+    text-decoration: none;
+    display: block;
+}
+
+.chitiet .ttchitiet{
+    position: absolute;
+    bottom: 18px;
+    left: 70%;
+    width: 30%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    transition: 0.5s;
+    overflow: hidden;
+    border-radius: 20px;
+    padding-left: 3%;
+    padding-top: -10%;
+}
+
+.chitiet:hover .ttchitiet{
+    width:100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+}

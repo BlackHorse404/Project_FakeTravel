@@ -1,0 +1,15 @@
+/* Tablet & Mobile */
+@media (max-width: 1023px) {
+    .offset-1 {margin-left: 0;}
+    .product-date {left: -2%;}
+    .filter-input {padding: 0 4px;}
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .offset-1 {margin-left: 0;}
+}
