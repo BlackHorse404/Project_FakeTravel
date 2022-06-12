@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../img/iconWebStar.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styles-index.css">
+    <link rel="stylesheet" href="../styles/styles-index-tour.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="../js/fontawesome.js"></script>
+    <title>FAKE Travel</title>
+</head>
+
+<body>
+    <!-- menu mobile -->
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa-solid fa-bars"></i></span>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a id="logoSubMenu" href="../index.html"><img src="../img/logo.png" width="150px"/></a>
+        <span href="#" id="btn-close-subMenu" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></span>
+        <ul>
+            <li><a href="../introduce.html">Giới Thiệu</a></li>
+            <li>
+                <a id="btn-mobile-TourNoiDia" href="../TourTrongNuoc.html">Tour Nội Địa <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i><sup><span class="ms-1 badge bg-danger">Hot</span></sup></a>
+                <ul id="mobile-TourNoiDia" class="hide">
+                    <li>
+                        <a id="btn-mobile-TourNoiDia-Bac" href="#">Du Lịch Miền Bắc <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i></a>
+                        <ul id="mobile-TourNoiDia-Bac" class="hide">
+                            <li><a href="#">Du Lịch Hà Nội</a></li>
+                            <li><a href="#">Du Lịch Sa Pa</a></li>
+                            <li><a href="#">Du Lịch Hạ Long</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="btn-mobile-TourNoiDia-Trung" href="#">Du Lịch Miền Trung <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i></a>
+                        <ul id="mobile-TourNoiDia-Trung" class="hide">
+                            <li><a href="#">Du Lịch Đà Nẵng</a></li>
+                            <li><a href="#">Du Lịch Phú Yên</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="btn-mobile-TourNoiDia-Nam"  href="#">Du Lịch Miền Nam <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i></a>
+                        <ul id="mobile-TourNoiDia-Nam" class="hide">
+                            <li><a href="#">Du Lịch Côn Đảo</a></li>
+                            <li><a href="#">Du Lịch Phú Quốc</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a id="btn-mobile-TourNuocNgoai" href="./TourNuocNgoai.html">Tour Nước Ngoài <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i></a>
+                <ul id="mobile-TourNuocNgoai" class="hide">
+                    <li>
+                        <a id="btn-mobile-TourNuocNgoai-A" href="#">Du Lịch Châu Á <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i></a>
+                        <ul id="mobile-TourNuocNgoai-A" class="hide">
+                            <li><a href="#">Du Lịch Hàn Quốc</a></li>
+                            <li><a href="#">Du Lịch Nhật Bản</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="btn-mobile-TourNuocNgoai-Au" href="#">Du Lịch Châu Âu <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i></a>
+                        <ul id="mobile-TourNuocNgoai-Au" class="hide">
+                            <li><a href="#">Du Lịch Anh</a></li>
+                            <li><a href="#">Du Lịch Nga</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="btn-mobile-TourNuocNgoai-My" href="#">Du Lịch Châu Mỹ <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i></a>
+                        <ul id="mobile-TourNuocNgoai-My" class="hide">
+                            <li><a href="#">Du Lịch Canada</a></li>
+                            <li><a href="#">Du Lịch Mỹ</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="btn-mobile-TourNuocNgoai-Uc" href="#">Du Lịch Châu Úc <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i></a>
+                        <ul id="mobile-TourNuocNgoai-Uc" class="hide">
+                            <li><a href="#">Du Lịch Sydney</a></li>
+                            <li><a href="#">Du Lịch Melbourne</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="./News.html">Tin Tức</a></li>
+            <li><a href="./contact.html">Liên Hệ</a></li>
+            <li>
+                <div id="mobile-box-search">
+                    <input type="text" style="width: 230px;" name="searchBar" placeholder="Tìm kiếm" class="rounded-0">
+                    <div class="btn btn-danger rounded-0" style="height: 36px;"><i class="fa-solid fa-magnifying-glass" style="text-shadow: none; font-size: 15px;"></i></div>
+                </div>
+            </li>
+            <li><a href="./Login.html">Đăng Nhập</a></li>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- menu desktop -->
+    <a name="home"></a>
+    <nav id="menu-select" class="navbar navbar-expand-md p-0">
+        <div class="container-fluid p-0 bg-black d-block" id="box--header__menu" style="background-image: url('../img/l2.png');">
+            <div class="container collapse navbar-collapse d-flex align-items-center" id="navbarNav">
+                <a class="nav-item" href="../index.html">
+                    <img id="logoWeb" src="../img/logo.png" width="120px" class="ms-1 pb-2 mt-1"/>
+                </a>
+                <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#menu--main" aria-controls="menu--main" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="navbar-collapse collapse justify-content-end" id="menu--main" >
+                    <ul style="z-index: 999999;" class="navbar-nav text-red me-1 text-uppercase text-shadow">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../introduce.html">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item" id="TourNoiDia">
+                            <a class="nav-link text-white" href="../TourTrongNuoc.html">tour nội địa <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i><sup><span class="ms-1 badge bg-danger">Hot</span></sup></a>
+                            <table class="bg-light rounded hide" id="SubMenu_NoiDia" cellpadding="10px" >
+                                <thead>
+                                    <tr>
+                                        <th>Du Lịch Miền Bắc</th>
+                                        <th>Du Lịch Miền Trung</th>
+                                        <th>Du Lịch Miền Nam</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Du Lịch Hà Nội</td>
+                                        <td class="line-left">Du Lịch Đà Nẵng</td>
+                                        <td class="line-left">Du Lịch Côn Đảo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Du Lịch Sa Pa</td>
+                                        <td class="line-left hoverTour">Du Lịch Phú Yên</td>
+                                        <td class="line-left">Du Lịch Phú Quốc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Du Lịch Hạ Long</td>
+                                        <td class="line-left"></td>
+                                        <td class="line-left"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li class="nav-item" id="TourNuocNgoai">
+                            <a class="nav-link text-white" href="../TourNuocNgoai.html">tour nước ngoài <i class="fa-solid fa-angle-down" style="font-size: 13px;"></i></a>
+                            <table class="bg-light rounded hide" id="SubMenu_NuocNgoai" cellpadding="10px" >
+                                <thead>
+                                    <tr>
+                                        <th>Du Lịch Châu Á</th>
+                                        <th>Du Lịch Châu Âu</th>
+                                        <th>Du Lịch Châu Mỹ</th>
+                                        <th>Du Lịch Châu Úc</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="line-left">Du Lịch Hàn Quốc</td>
+                                        <td class="line-left">Du Lịch Anh</td>
+                                        <td class="line-left">Du Lịch Canada</td>
+                                        <td class="line-left">Du Lịch Sydney</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="line-left">Du Lịch Nhật Bản</td>
+                                        <td class="line-left">Du Lịch Nga</td>
+                                        <td class="line-left">Du Lịch Mỹ</td>
+                                        <td class="line-left">Du Lịch Melbourne</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="line-left"></td>
+                                        <td class="line-left"></td>
+                                        <td class="line-left"></td>
+                                        <td class="line-left"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../News.html">tin tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../contact.html">liên hệ</a>
+                        </li>
+                        <li class="nav-item" id="item--search">
+                            <a class="nav-link text-white" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <div class="hide" id="box--search">
+                                <input type="text" style="height:35.5px;" name="searchBar" placeholder="Tìm kiếm" class="rounded-0">
+                                <div class="btn btn-danger rounded-0" style="height: 36px;"><i class="fa-solid fa-magnifying-glass" style="text-shadow: none; font-size: 15px;"></i></div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white pe-3" href="../Login.html">Đăng Nhập</a>
+                        </li>
+                        <li class="line-left ps-2"></li>
+                        <li class="nav-item text-white" id="item--shopCart">
+                            <a class="nav-link text-white" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <div id="box--shopCart" class="p-3 text-black text-capitalize hide" style="text-shadow: none; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+                                <p>Chưa có sản phẩm trong giỏ hàng.</p>
+                                <p></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- path -->
+        <nav aria-label="breadcrumb" class="mt-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="../TourList.html">Tour Nước Ngoài</a></li>
+                <li class="breadcrumb-item"><a href="../TourList.html">Du Lịch Châu Âu</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Du Lịch Pháp</li>
+            </ol>
+        </nav>
+        <!-- content pay tour -->
+        <div id="tour-content" class="row row-cols-sm-1 g-3 row-cols-md-2 mt-3">
+            <div class="col imgTour" style="background-image: url('../img/l2.png');"></div>
+            <div class="col detailTour">
+                <h3>Vịnh Hạ Long - Việt Nam</h3>
+                <hr style="width: 30px; border-width: 4px; border-color: black; margin: 20px 0px 5px 0px;"/>
+                <h4 class="text-danger">8.000.000<sup>₫</sup></h4>
+                <p>Vịnh Hạ Long là một vịnh nhỏ thuộc phần bờ Tây vịnh Bắc Bộ tại khu vực biển Đông Bắc Việt Nam, bao gồm vùng biển đảo thuộc thành phố Hạ Long, thị xã Cẩm Phả và một phần của huyện đảo Vân Đồn. Vịnh Hạ Long giáp đảo Cát Bà với đường bờ biển dài 120 km cùng gần 2000 hòn đảo lớn nhỏ. Khoảng một nửa trong số những đảo này đã được đặt tên, số còn lại phần nhiều còn hoang sơ, ít được khai phá và chưa có tên.                </p>
+                <input type="submit" value="Đặt Ngay" id="bookin" class="btn btn-danger text-uppercase ps-5 pe-5 mt-4"/>
+            <hr/>
+            <p style="font-size: 12px;">Danh Mục: <a href="../TourList.html">Châu Âu</a></p>
+            </div>
+        </div>
+        <hr style="margin: 50px 0; margin-top: 100px;"/>
+        <!-- comment -->
+        <div id="comment" class="mb-5">
+            <div class="Title-Comment text-uppercase fw-bold">
+                <div id="MoTa" class="activeComment">Mô Tả</div>
+                <div id="ThongTinBoSung">Thông tin bổ sung</div>
+                <div id="DanhGia" class="position-relative">Đánh Giá 
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        0
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </div>
+            </div>
+            <div class="content-Comment">
+                <div class="MoTa-Content" style="display: block;">
+                    <p>
+                        Vịnh Hạ Long là một vịnh nhỏ thuộc phần bờ Tây vịnh Bắc Bộ tại khu vực biển Đông Bắc Việt Nam, bao gồm vùng biển đảo thuộc thành phố Hạ Long, thị xã Cẩm Phả và một phần của huyện đảo Vân Đồn. Vịnh Hạ Long giáp đảo Cát Bà với đường bờ biển dài 120 km cùng gần 2000 hòn đảo lớn nhỏ. Khoảng một nửa trong số những đảo này đã được đặt tên, số còn lại phần nhiều còn hoang sơ, ít được khai phá và chưa có tên.
+                    </p>
+                </div>
+                <div class="TTBS-Content" style="display: none;">
+                    <table style="width: 80%; width: 100%; margin: 20px 0; height: 100px;">
+                        <tr>
+                            <td>Hướng Dẫn Viên</td>
+                            <td>Không Có</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="DanhGia-Content" style="display: none;">
+                    <h3>Đánh Giá</h3>
+                    <div class="mt-3">Chưa có đánh giá nào</div>
+                    <div id="box-DanhGia">
+                        <form action="#">
+                            <h4 class="text-uppercase">Hãy là người đầu tiên nhận xét</h4>
+                            <p id="titleStarVote">Đánh giá của bạn</p>
+                            <ul id="StarVote">
+                                <li class="star"><i class="fa-solid fa-star"></i></li>
+                                <li class="star"><i class="fa-solid fa-star"></i></li>
+                                <li class="star"><i class="fa-solid fa-star"></i></li>
+                                <li class="star"><i class="fa-solid fa-star"></i></li>
+                                <li class="star"><i class="fa-solid fa-star"></i></li>
+                            </ul>
+                            <p>Nhận Xét của bạn *</p>
+                            <textarea requireds></textarea>
+                            <p>Họ Tên *</p>
+                            <input type="text" name="nameSender" required placeholder="Nguyễn Văn An" />
+                            <p>Email *</p>
+                            <input type="text" name="MailSender" required placeholder="example@gmail.com"/>
+                            <input class="fw-bold text-white d-block btn btn-danger p-3 mt-5 m-auto w-50" type="submit" value="GỬI ĐI"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- The Same Product -->
+        <div id="SameProduct" class="container mb-5">
+            <h4 class="text-uppercase mb-5">Sản Phẩm tương tự</h4>
+            <div class="row row-cols-sm-1 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card">
+                        <img src="../img/1_Top_5_Beaches_in_Nha_Trang_-_By_Simon_Dannhauer.jpg" alt="">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Du Lịch Nha Trang</h5>
+                            <sup class="card-text">Danh mục: Hot Location</sup>
+                            <p class="card-text fw-bold text-danger">2.500.000<sup>₫</sup></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="../img/1_Top_5_Beaches_in_Nha_Trang_-_By_Simon_Dannhauer.jpg" alt="">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Du Lịch Nha Trang</h5>
+                            <sup class="card-text">Danh mục: Hot Location</sup>
+                            <p class="card-text fw-bold text-danger">2.500.000<sup>₫</sup></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="../img/1_Top_5_Beaches_in_Nha_Trang_-_By_Simon_Dannhauer.jpg" alt="">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Du Lịch Nha Trang</h5>
+                            <sup class="card-text">Danh mục: Hot Location</sup>
+                            <p class="card-text fw-bold text-danger">2.500.000<sup>₫</sup></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer" class="container-fluid img-footer bg-black text-white p-0">
+        <div class="container-fluid row row-cols-sm-1 row-cols-md-4 p-5">
+            <div class="col list-style-none" id="LienHe">
+                <h6>Liên Hệ</h6>
+                <ul id="footer--lienhe">
+                    <li class="text-white">
+                        <i class="fa-solid fa-location-dot pe-3" style="color: yellow;"></i>  140 Lê Trọng Tấn, Q. Tân Phú, TP. HCM
+                    </li>
+                    <li>
+                        <a href="tel:1900 100 100"><i class="fa-solid fa-phone pe-3" style="color: yellow;"></i> 1900 100 100</a></li>
+                    <li>
+                        <a href="sendto:FakeTravel@gmail.com">
+                            <i class="fa-solid fa-envelope pe-3" style="color: yellow;"></i> FakeTravel@gmail.com
+                        </a>
+                    </li>
+                    <li class="text-white">
+                        Đăng ký để được nhận thông tin khuyến mãi một cách nhanh chóng.
+                    </li>
+                    <li class="opacity-100">
+                        <input id="text-sendMail" style="width:180px;" type="text" placeholder="Email của bạn"/>
+                        <input id="btn-sendMail" type="submit" value="Gửi"/>
+                    </li>
+                </ul>
+            </div>
+            <div class="col" id="TinTuc">
+                <h6>Tin Tức</h6>
+                <ul>
+                    <li><a href="#">Bản tin Du Lịch Việt</a></li>
+                    <li><a href="#">Góc báo chí Du Lịch Việt</a></li>
+                    <li><a href="#">Cẩm nang du lịch</a></li>
+                    <li><a href="#">Khám phá du lịch</a></li>
+                    <li><a href="#">Kinh nghiệm du lịch</a></li>
+                    <li><a href="#">Sự kiện du lịch</a></li>
+                    <li><a href="#">Tư vấn du lịch</a></li>
+                    <li><a href="#">Tuyển dụng Du Lịch</a></li>
+                </ul>
+            </div>
+            <div class="col" id="GocKhachHang">
+                <h6>Góc Khách Hàng</h6>
+                <ul>
+                    <li><a href="#">Quy tắc bảo hiểm</a></li>
+                    <li><a href="#">Điều kiện và điều khoản</a></li>
+                    <li><a href="#">Quyền riêng tư</a></li>
+                    <li><a href="#">Chính sách bảo mật và thông tin</a></li>
+                    <li><a href="#">Ý kiến khách hàng</a></li>
+                    <li><a href="#">Khách hàng thân thiết</a></li>
+                    <li><a href="#">Phương thức thanh toán</a></li>
+                </ul>
+            </div>
+            <div class="col" id="TourPhoBien">
+                <h6>Tour Phổ Biến</h6>
+                <div class="row row-cols-2 row-cols-md-3 g-3 mt-3">
+                    <div class="col">
+                        <img class="img-fit rectangle-100-60 img-tour-fv" src="../img/l1.png" alt="img-1">
+                    </div>
+                    <div class="col">
+                        <img class="img-fit rectangle-100-60 img-tour-fv" src="../img/l2.png" alt="img-1">
+                    </div>
+                    <div class="col">
+                        <img class="img-fit rectangle-100-60 img-tour-fv" src="../img/l3.jpg" alt="img-1">
+                    </div>
+                    <div class="col">
+                        <img class="img-fit rectangle-100-60 img-tour-fv" src="../img/l4.jpg" alt="img-1">
+                    </div>
+                    <div class="col">
+                        <img class="img-fit rectangle-100-60 img-tour-fv" src="../img/l5.png" alt="img-1">
+                    </div>
+                    <div class="col">
+                        <img class="img-fit rectangle-100-60 img-tour-fv" src="../img/l6.png" alt="img-1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center" id="social-network">
+            <h6>Social Network</h6>
+            <ul class="p-0">
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+        <div class="text-center mt-5 pb-3">
+            &#169; 2022 Official Website FAKE Tourism
+        </div>
+    </div>
+
+    <!-- back home -->
+    <a href="#home" class="remove-decoration d-flex">
+        <div id="btn-backhome" class="hide">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+    </a>
+
+    <!-- Form Payer -->
+    <div id="container-FormTicket" class="container-fluid">
+        <div id="FormPayTicket" class="hide">
+            <form action="#" method="dialog">
+                <div id="headerFormPay">
+                    <img src="../img/logoWeb.png" width="30%"/>
+                    <div id="closeFormPay">
+                        <i class="fa-solid fa-xmark text-white fs-2"></i>
+                    </div>
+                </div>
+                <div id="bodyFormPay">
+                    <p>Tour</p>
+                    <input type="text" placeholder="Tên Tour" name="Tour" id="TourName" value="Du Lịch Paris - Pháp" required>
+                    <p>Tên Của Bạn</p>
+                    <input type="text" placeholder="Ví dụ: Nguyễn Văn An" name="nameBooker" id="namBooker" required>
+                    <p>Tiêu Đề</p>
+                    <input type="text" name="Title" id="TieuDe" placeholder="Ví dụ: Đặt Vé" required>
+                    <p>Số Lượng Vé</p>
+                    <input placeholder="Ví dụ: 1" type="number" name="numberTicket" id="soLuongVe" min="1" max="99" required>
+                    <input type="submit" class="btn btn-info text-white fw-bold" id="bookinSuccess" value="ĐẶT VÉ">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="alertSuccess" class="alert alert-success" style="width:200px; display: none;" role="alert">
+        Book In Success !
+    </div>
+</body>
+    <script src="../js/js-index-tour.js"></script>
+</html>

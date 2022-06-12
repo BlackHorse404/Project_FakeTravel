@@ -20,7 +20,6 @@ body{
 #header
 {
     width: 100%;
-
 }
 #heading
 {
@@ -51,6 +50,9 @@ body{
     justify-items: end;
     width: 770px;
     margin-left: auto;;
+}
+.navbar-nav {
+    margin: auto;
 }
 .nav-item
 {
@@ -106,12 +108,26 @@ body{
     top: 0;
 	border: none;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+    #menu >button 
+    {
+        background-color: #fff;
+        margin-left: auto;
+        margin-right: 15px;
+    }
+    #navbarOffcanvasLg
+    {
+        background: #353535;
+    }
+    .navbar-nav
+    {
+
+    }
+ }
+
 /* end menu */
-
-/* dang nhap */
-
-
-/* end dang nhap */
 
 /* end header */
 

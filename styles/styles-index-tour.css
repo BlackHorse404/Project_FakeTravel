@@ -1,0 +1,217 @@
+/* global  */
+
+/* custome menu select */
+#menu-select #box--header__menu{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("../img/l1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* content pay tour */
+#tour-content{
+    margin-bottom: 20px;
+}
+#tour-content .imgTour{
+    width: 50%;
+    background-image: url("../img/l1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#tour-content .detailTour{
+    width: 50%;
+    text-align: justify;
+    padding-left: 80px;
+}
+
+/* Comment */
+.Title-Comment div{
+    display: inline-block;
+    border: 0.5px solid black;
+    padding: 10px 15px;
+    border-top: 3px solid rgb(0, 0, 0);;
+    background-color: rgb(215, 215, 215);
+    border-bottom: none;
+    opacity: 0.8;
+}
+.Title-Comment div:hover{
+    background-color: rgb(254, 236, 236);
+    border-top: 3px solid rgb(255, 0, 0);
+    cursor: pointer;
+    opacity: 1;
+}
+
+
+.MoTa-Content{
+    padding: 20px;
+    border: 0.5px solid black;
+    width: 80%;
+    text-align: justify;
+    padding-bottom: 30px;
+}
+.TTBS-Content{
+    border: 0.5px solid black;
+    width: 80%;
+    padding: 20px;
+}
+.DanhGia-Content
+{
+    padding: 40px;
+    width: 80%;
+    border: 0.5px solid black;
+}
+/* danh gia */
+#box-DanhGia{
+    margin: 0 auto;
+    width: 90%;
+    border: 2px solid rgb(255, 0, 0);
+    margin-bottom: 20px;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: antiquewhite;
+}
+#box-DanhGia textarea{
+    width: 100%;
+    height: 100px;
+}
+#box-DanhGia input[type="text"]{
+    width: 50%;
+    padding-left: 10px;
+    height: 40px;
+}
+#box-DanhGia p{
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+#titleStarVote{
+    display: inline-block;
+}
+#StarVote{
+    display: inline-block;
+    list-style: none;
+    direction: rtl;
+}
+#StarVote li{
+    display: inline-block;
+}
+.star:hover,
+.star:hover ~ .star{
+    color: red;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.activeComment{
+    border-top: 3px solid red !important;
+    background-color: rgb(254, 236, 236) !important;
+    opacity: 1 !important;
+}
+
+.card:hover{
+    animation: zoom 0.5s forwards linear;
+    box-shadow: 0px 0px 12px 1px black;
+    cursor: pointer;
+}
+.card{
+    transition: 0.8s;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}
+
+/* form payer */
+#container-FormTicket{
+    display: flex;
+    justify-content: center;
+}
+#FormPayTicket{
+    position: fixed;    
+    top: 20px;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    box-shadow: 0px 0px 8px white;
+    z-index: 99999;
+}
+#headerFormPay{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(0, 0, 0);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#headerFormPay #closeFormPay{
+    background-color: red;
+    height: 80px;
+    padding: 0 30px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-top-right-radius: 10px;
+    line-height: 90px;
+    opacity: 0.9;
+}
+#headerFormPay #closeFormPay:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+#headerFormPay img{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#bodyFormPay{
+    width: 100%;
+    padding: 40px;
+}
+
+#FormPayTicket input{
+    display: block;
+}
+#FormPayTicket input:focus-visible{
+    outline: none;
+    box-shadow: 0px 0px 6px black;
+}
+#FormPayTicket p{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+#FormPayTicket input[type="text"], 
+#FormPayTicket input[type="number"]
+{
+    width: 100%;
+    height: 45px;
+    padding-left: 10px;
+    border: none;
+    border-bottom: 3px solid black;
+}
+#FormPayTicket input[type="text"]:hover, 
+#FormPayTicket input[type="number"]:hover{
+    
+    border-bottom: 3px solid rgb(0, 255, 0);
+}
+
+#FormPayTicket input[type="submit"]{
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    padding: 10px 0;
+}
+#alertSuccess
+{
+    position: fixed;
+    top:20px;
+    right: 0;
+    z-index: 99999;
+    box-shadow: 0px 0px 10px rgb(0, 255, 0);
+}
