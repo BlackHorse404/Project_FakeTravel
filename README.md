@@ -2,7 +2,7 @@
     <h1>Project FakeTravel</h1>
     <ul type="square" align="left">
       <li>Use: HTML ,CSS, JS </li>
-      <li>Applied Base On Flex, Block, Boostrap</li>
+      <li>Applied Base On Flex, Block, Boostrap, Grid System, ...</li>
       <li>
         Member:
         <ul>
