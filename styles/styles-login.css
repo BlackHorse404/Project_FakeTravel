@@ -119,6 +119,18 @@ body{
 #box-register input,#box-login input{
     display: block;
 }
+#box-register p{
+    display: inline-block;
+    position: relative;
+    top: 31.5px;
+    left: 6px;
+}
+#box-login p {
+    display: inline-block;
+    position: relative;
+    top: 31.5px;
+    left: 6px;
+}
 
 #open-terms{
     /* color: rgb(221, 221, 221); */
@@ -127,22 +139,57 @@ body{
 #open-terms:hover{
     color: blue;
 }
+#eye-Pass{
+    position: absolute;
+    bottom: 186px;
+    right:32px;
+    opacity: 0.8;
+}
+#eye-Pass:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+#rs-eye-RePass{
+    position: absolute;
+    bottom: 152px;
+    right: 30px;
+    opacity: 0.8;
+}
+#rs-eye-Pass{
+    position: absolute;
+    bottom: 235px;
+    right: 30px;
+    opacity: 0.8;
+}
+#rs-eye-RePass:hover,
+#rs-eye-Pass:hover{
+    opacity: 1;
+    cursor: pointer;
+}
 
 input[name="Email"],input[name="password"],input[name="re-password"]{
     width: 100%;
     height: 40px;
     border-radius: 1px;
     padding-left: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border: none;
     border-bottom: 2px solid black;
     background-color: transparent;
+    padding-left: 30px;
 }
+input[name="Email"]:hover,input[name="password"]:hover,input[name="re-password"]:hover{
+    border-bottom: 2px solid rgb(0, 255, 157);
+}
+
 
 input[name="Email"]:focus-visible,input[name="re-password"]:focus-visible, input[name="password"]:focus-visible
 {
+    border-bottom: 2px solid rgb(0, 255, 157);
     outline-style: unset;
-    box-shadow: 0px 0px 18px 5px rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 10px 0px rgba(103, 103, 103, 0.8);
+    border-radius: 5px;
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 

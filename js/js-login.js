@@ -117,3 +117,53 @@ submit2.onclick = function() {
         }, 2000);
     }
 }
+
+// show password
+const inPassLogin = document.getElementById("pass-user")
+const showPass = document.getElementById("eye-Pass")
+showPass.addEventListener("click",()=>{
+    if(showPass.classList.contains("fa-eye"))
+    {
+        showPass.classList.remove("fa-eye");
+        showPass.classList.add("fa-eye-slash")
+        inPassLogin.type="text";
+    }
+    else {
+        showPass.classList.remove("fa-eye-slash")
+        showPass.classList.add("fa-eye");
+        inPassLogin.type="password";
+    }
+})
+
+const inPassRegister = document.getElementById("pass-user-rs")
+const showPassRegis = document.getElementById("rs-eye-Pass")
+const inRepassRegister = document.getElementById("re-pass-user-rs")
+const showRePassRegis = document.getElementById("rs-eye-RePass")
+
+showPassRegis.addEventListener("click",()=>{
+    if(showPassRegis.classList.contains("fa-eye"))
+    {
+        showPassRegis.classList.remove("fa-eye");
+        showPassRegis.classList.add("fa-eye-slash")
+        inPassRegister.type="text";
+    }
+    else {
+        showPassRegis.classList.remove("fa-eye-slash")
+        showPassRegis.classList.add("fa-eye");
+        inPassRegister.type="password";
+    }
+})
+
+showRePassRegis.addEventListener("click",()=>{
+    if(showRePassRegis.classList.contains("fa-eye"))
+    {
+        showRePassRegis.classList.remove("fa-eye");
+        showRePassRegis.classList.add("fa-eye-slash")
+        inRepassRegister.type="text";
+    }
+    else {
+        showRePassRegis.classList.remove("fa-eye-slash")
+        showRePassRegis.classList.add("fa-eye");
+        inRepassRegister.type="password";
+    }
+})

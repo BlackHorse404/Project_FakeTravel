@@ -30,40 +30,51 @@
             </div>
 
             <div id="box-login" class="container-fluid">
-                <p class="mt-4 mb-4 text-shadow-light" style="text-align: justify; font-size: 0.9em;">
+                <p class="mb-5 text-shadow-light" style="text-align: justify; font-size: 0.9em;">
                     Welcome to <b>FakeTravel</b> ! Please fill Your
                     e-mail and password to sign in into your
                     account.
                 </p>
-                <p class="m-0">E-mail</p>
+                
+                <p class="m-0"><i class="fa-solid fa-envelope"></i></p>
                 <input type="text" name="Email" id="mail-user" placeholder=" Example@gmail.com" required oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Enter E-Mail Here')"/>
                 <span style="color:red;" id="errEmail">Vui lòng kiểm tra email!</span>
-                <p class="m-0 mt-4">Password</p>
-                <input type="password" name="password" id="pass-user" placeholder="&#x25CF&#x25CF&#x25CF&#x25CF&#x25CF&#x25CF" required oninvalid="this.setCustomValidity('Enter Password Here')" oninput="this.setCustomValidity('')"/>
+                
+                <p class="m-0 mt-3"><i class="fa-solid fa-key"></i></p>
+                <input type="password" name="password" id="pass-user" placeholder=" &#x25CF&#x25CF&#x25CF&#x25CF&#x25CF&#x25CF" required oninvalid="this.setCustomValidity('Enter Password Here')" oninput="this.setCustomValidity('')"/>
+                <i id="eye-Pass" class="fa-solid fa-eye"></i>
                 <span style="color:red;" id="errPass">Password phải đủ từ 10 ký tự!</span>
+                
                 <a id="forget-password" href="#"><p>Forget password ?</p></a>
-                <div class="form-check mt-4"> 
+                <div class="form-check mt-3"> 
                     <input class="form-check-input" type="checkbox" name="terms" id="check-term" required >
                     <label class="form-check-label text-shadow-light" for="check-term">
                         I agree to <a id="open-terms" href="#">terms</a> and conditions
                     </label>
                 </div>
+                
                 <input class="" type="submit" name="login" id="btn-login" value="Login"/>
             </div>
 
             <div id="box-register" class="container-fluid hide">
-                <p class="mt-4 mb-4 text-shadow-light" style="text-align: center; font-size: 0.9em;">
+                <p class="mb-5 text-shadow-light" style="text-align: center; font-size: 0.9em;">
                     Welcome to <b>FakeTravel</b> ! Please fill box to register.
                 </p>
-                <p class="m-0">E-mail</p>
-                <input type="text" name="Email" id="mail-user-rs" placeholder=" Example@gmail.com" required oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Enter E-Mail Here')"/>
+                
+                <p class="m-0"><i class="fa-solid fa-envelope"></i></p>
+                <input type="text" name="Email" id="mail-user-rs" placeholder="Example@gmail.com" required oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Enter E-Mail Here')"/>
                 <span style="color:red;" id="errEmail2">Kiểm tra E-Mail hợp lệ !</span>
-                <p class="m-0 mt-4">Password</p>
+                
+                <p class="m-0 mt-3"><i class="fa-solid fa-key"></i></p>
                 <input type="password" name="password" id="pass-user-rs" placeholder="Your password" required oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Enter Password Here')"/>
+                <i id="rs-eye-Pass" class="fa-solid fa-eye"></i>
                 <span style="color:red;" id="errPass2">Password phải đủ từ 10 ký tự!</span>
-                <p class="m-0 mt-4">Confirm Password</p>
+                
+                <p class="m-0 mt-3"><i class="fa-solid fa-key"></i></p>
                 <input type="password" name="re-password" id="re-pass-user-rs" placeholder="Re-enter your password" required oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Enter Re-Password Here')"/>
+                <i id="rs-eye-RePass" class="fa-solid fa-eye"></i>
                 <span style="color:red;" id="errRePass2">Password không trùng khớp!</span>
+                
                 <div class="form-check mt-4"> 
                     <input class="form-check-input" type="checkbox" name="terms" id="check-term1" required>
                     <label class="form-check-label text-shadow-light" for="check-term1">
