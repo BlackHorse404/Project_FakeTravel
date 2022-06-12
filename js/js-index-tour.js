@@ -344,7 +344,7 @@ window.addEventListener("scroll", myScrollFunc);
 const btnBookIn = document.getElementById("bookin")
 const formPay = document.getElementById("FormPayTicket")
 const closeFormPay = document.getElementById("closeFormPay")
-const bodyPage = document.querySelector("body")
+
 const btnBookInSucess = document.getElementById("bookinSuccess")
 const alertSuccess = document.getElementById("alertSuccess")
 
@@ -374,7 +374,6 @@ closeFormPay.addEventListener("click", ()=>{
     {
         formPay.classList.remove("show")
         formPay.classList.add("hide")
-        bodyPage.style.backgroundColor = "transparent"
     }
 })
 
@@ -383,13 +382,11 @@ btnBookIn.addEventListener("click", () => {
     {
         formPay.classList.remove("hide")
         formPay.classList.add("show")
-        bodyPage.style.backgroundColor = "rgba(0, 0, 0, 0.6)"
     }
     else
     {
         formPay.classList.remove("show")
         formPay.classList.add("hide")
-        bodyPage.style.backgroundColor = "transparent"
     }
 })
 
